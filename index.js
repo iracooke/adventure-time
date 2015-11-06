@@ -14,8 +14,8 @@ module.exports = function(opts) {
   var guideDiv = document.querySelector('.guide')
   var consoleDiv = document.querySelector('.console')
   var defaultConsole = 'terminal.html?server=' + opts.server + '&id=' + opts.id
-  var guideFrame = iframe({src: opts.guide, container: guideDiv})
-  var consoleFrame = iframe({src: opts.console || defaultConsole, container: consoleDiv})
+  var guideFrame = iframe({src: opts.guide, container: guideDiv, sandboxAttributes: ['allow-scripts', 'allow-same-origin']})
+  var consoleFrame = iframe({src: opts.console || defaultConsole, container: consoleDiv, sandboxAttributes: ['allow-scripts', 'allow-same-origin']})
 
   var actions = {
     "toggle-bottom": function() {
