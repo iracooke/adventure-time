@@ -2,6 +2,6 @@ var adventureTime = require('./')
 
 adventureTime({
   guide: "http://maxogden.github.io/get-dat/guide",
-  server: "try-dat.com",
+  server: "46.101.11.144:8080",
   id: Math.random().toString(36).slice(2)
 })
